@@ -1,0 +1,44 @@
+#globalFooter
+{
+	color: #eee;
+	
+	background: #333;
+	
+	.inner
+	{
+		@extend %center_layout;
+		padding: 20px 0;
+	}
+}
+	#footerNav
+	{
+		
+	}
+		#footerNavList
+		{
+			
+			.nav-item
+			{
+				float: left;
+				margin-right: 15px;
+				
+				a
+				{
+					color: #ddd;
+					
+					&:hover
+					{
+						color: $COLOR_KEY;
+					}
+				}
+			}
+		}
+	
+	#copyright
+	{
+		margin: 20px 0 0 0;
+		
+		text-align: center;
+		font-size: 130%;
+		font-family: "MuseoSans-500";
+	}

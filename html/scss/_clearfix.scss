@@ -1,0 +1,27 @@
+/* *****************************
+ *
+ * Clearfix
+ *
+ **************************** */
+.clear
+{
+	display:inline-table;
+	min-height:1%;
+
+	&:after
+	{
+		content: ".";
+		display: block;
+		height: 0;
+		clear: both;
+		visibility: hidden;
+	}
+}
+* html .clear
+{
+	height:1%;
+}
+.clear
+{
+	display:block;
+}

@@ -1,0 +1,22 @@
+.section
+{
+	
+}
+	.section-header
+	{
+		@extend %center_layout;
+		margin-top: 30px;
+		
+		.section-title
+		{
+			
+			font-size: 200%;
+			line-height: 160%;
+		}
+	}
+	.section-contents
+	{
+		@extend %center_layout;
+		margin-top: 10px;
+		margin-bottom: 30px;
+	}

@@ -1,0 +1,117 @@
+/* *****************************
+ *
+ * Reset StyleSheet.
+ *
+ **************************** */
+@include global-reset;
+
+/* *****************************
+ *
+ * html base styles.
+ *
+ **************************** */
+html
+{
+	//layout
+    overflow-x: auto;
+
+	//type
+	color: $TEXT_BASE_COLOR;
+	-webkit-text-size-adjust: 100%;
+	
+	background: $BACKGROUND_BASE_COLOR;
+}
+
+body
+{
+	//typo
+	line-height: 160%;
+	font-size: 83%;
+	font-family: $FONT_FAMILY;
+}
+
+/* *****************************
+ *
+ * inputs
+ *
+ **************************** */
+input,
+select,
+textarea
+{
+        font-family     : $FONT_FAMILY;
+        line-height     : 150%;
+}
+
+
+/* *****************************
+ *
+ * anchor styles
+ *
+ **************************** */
+a
+{
+        text-decoration : none;
+        color           : $COLOR_LINK;
+        
+        //nest selector
+        &:visited
+        {
+                text-decoration: none;
+        }
+        &:hover
+        {
+                text-decoration: underline;
+                color           : $COLOR_BLU;
+        }
+        &:active
+        {
+                text-decoration: none;
+                color           : $COLOR_YEL;
+        }
+}
+
+
+/* *****************************
+ *
+ * extend classes.
+ *
+ **************************** */
+%center_layout
+{
+	margin-left:  auto;
+	margin-right: auto;
+
+	width: auto; //default
+	max-width: $MAX_SECTION_SIZE;
+
+	//media queries
+	@include mq( 0px, 320px ) {
+		margin-left:  5px;
+		margin-right: 5px;
+	}
+	@include mq( 321px, 568px ) {
+		margin-left:  5px;
+		margin-right: 5px;
+	}
+	@include mq( 569px, 768px ) {
+		margin-left:  10px;
+		margin-right: 10px;
+	}
+	@include mq( 769px, 1023px ) {
+		margin-left:  10px;
+		margin-right: 10px;
+	}
+	@include mq( 1024px, 1279px ) {
+		width: 960px;
+	}
+	@include mq( 1280px, 1599px ) {
+		width: 1200px;
+	}
+	@include mq( 1600px, 1919px ) {
+		width: 1500px;
+	}
+	@include mq( 1920px, 4000px ) {
+		width: 1700px;
+	}
+}

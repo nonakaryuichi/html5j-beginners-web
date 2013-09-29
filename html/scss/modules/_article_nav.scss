@@ -1,0 +1,38 @@
+.article-nav
+{
+	
+}
+	.article-link-list
+	{
+		.link-item
+		{
+			margin: 3px 0 0 0;
+			
+			a
+			{
+				display: block;
+				padding: 15px;
+				
+				background: #fafafa;
+				
+				$box-shadow: 0 1px 3px $BACKGROUND_BASE_COLOR - #222;
+				@include box-shadow( $box-shadow );
+				@include border-radius( 2px );
+				
+				&:hover
+				{
+					background: #fff;
+				}
+			}
+			
+			.date
+			{
+				color: #666;
+			}
+			
+			.title
+			{
+				margin-left: 1em;
+			}
+		}
+	}

@@ -1,0 +1,58 @@
+/* ************************************
+ *
+ * SCSS Media Queries Mixins
+ * 
+ * Aauthor   : Ryuichi Nonaka
+ * Version   : 0.5.0
+ * Copyright : 2012 Ryuichi Nonaka
+ * Date      : 2013/08/07
+ *
+ * Released under the MIT license
+ *
+ *********************************** */
+
+
+/* ************************************
+ *
+ * MediaQueries Mixin
+ * Initialize variables
+ *
+ * @param $min-width: num - Minimum device width.
+ * @param $max-width: num - Maximum device width.
+ * @param $resolution: num - Device pixel ratio.
+ * @param $orientation: string or boolean [portrait|landscape|false] - Device orientation.
+ *
+ *********************************** */
+@mixin mq ( $min-width: 0, $max-width: 320, $resolution: false, $orientation: false) {
+	@if $resolution {
+		@if $orientation {
+			@media only screen
+			and ( min-width: $min-width )
+			and ( max-width: $max-width )
+			and ( -webkit-min-device-pixel-ratio: $resolution )
+			and ( min-resolution: #{$resolution}dppx )
+			and ( orientation: $orientation )
+			{ @content; }
+		} @else {
+			@media only screen
+			and ( min-width: $min-width )
+			and ( max-width: $max-width )
+			and ( -webkit-min-device-pixel-ratio: $resolution )
+			and ( min-resolution: #{$resolution}dppx )
+			{ @content; }
+		}
+	} @else {
+		@if $orientation {
+			@media only screen
+			and ( min-width: $min-width )
+			and ( max-width: $max-width )
+			and ( orientation: $orientation )
+			{ @content; }
+		} @else {
+			@media only screen
+			and ( min-width: $min-width )
+			and ( max-width: $max-width )
+			{ @content; }
+		}
+	}
+}

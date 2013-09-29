@@ -1,0 +1,6 @@
+# sass and compass
+.sass-cache/
+
+# sublime project
+.sublime-project
+.sublime-project.sublime-workspace
