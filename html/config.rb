@@ -1,4 +1,4 @@
-http_path = "http://dev.classmethod.jp/wp-content/themes/regeneration/"
+http_path = "http://nonakaryuichi.github.io/html5j-beginners-web/"
 css_dir = "css"
 sass_dir = "scss"
 images_dir = "images"
